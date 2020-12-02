@@ -1,7 +1,7 @@
 # Example Entities
 
-NOTE: These are being replaced with the contents of the `examples-relative`
-sibling directory, after December 16 2020. If you are using this example data
-you will need to be using a released version of the catalog backend which
-supports relative targets in Location entities
-[see #3513](https://github.com/backstage/backstage/pull/3513) after that time.
+These are some example entities that are suitable for loading into the catalog,
+for demonstration purposes.
+
+Both this repo and newly created Backstage repos have references into this
+data, through the static catalog locations in `app-config.yaml`.
