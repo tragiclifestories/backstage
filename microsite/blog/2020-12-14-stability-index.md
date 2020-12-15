@@ -8,7 +8,7 @@ TLDR; Backstage is heading out of alpha and moving onto the path to stable relea
 
 <br>
 
-Backstage has a great and growing community of users and contributors. With so much valuable feedback, this inevitably means that sometimes we will go back and revise design decisions that introduce breaking changes. Furthermore, as we continue to ship new features and systems, we’ll continue this cycle of iterating, gathering feedback, and iterating again before reaching a stable API.
+Backstage has a great and growing community of users and contributors. With so much valuable feedback, this inevitably means that sometimes we will go back and revise design decisions in a way that introduces breaking changes. Furthermore, as we continue to ship new features and systems, we’ll continue this cycle of iterating, gathering feedback, and iterating again before reaching a stable API.
 
 This rapid evolution can create uncertainty around which parts of the project are considered stable and which are not. Regardless of whether you're contributing to the project directly, setting up your own Backstage, or building plugins, you will be using various parts of the project that vary in stability. While many API surfaces of Backstage are reasonably solid and are unlikely to see any big breaking changes, others are more unstable or experimental.
 
@@ -29,9 +29,9 @@ The Stability Index has been tailored for the phase that the project is currentl
 
 In addition to the Stability Index, we have also recently adopted a weekly release cadence where we cut new releases every Thursday. Along with the two-week deprecation period of many of the API surfaces in Backstage, there is an excellent opportunity to form a routine to update your own Backstage projects either weekly or biweekly.
 
-In order to make the update process easier, we’ve added a new command to the Backstage CLI that allows you to easily update your project to use the latest Backstage release. The command is called `version:bump` and is executed in the root of your project using the CLI. You can see what it looks like in action below.
+In order to make the update process easier, we’ve added a new command to the Backstage CLI that allows you to easily update your project to use the latest Backstage release. The command is called `versions:bump` and is executed in the root of your project using the CLI. You can see what it looks like in action below.
 
-![Output of the `backstage-cli` `version:bump` command](assets/2020-12-14/versions-bump.png)
+![Output of the `backstage-cli` `versions:bump` command](assets/2020-12-14/versions-bump.png)
 
 ## Impact
 
