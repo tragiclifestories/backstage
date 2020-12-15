@@ -1,5 +1,11 @@
 # @backstage/core
 
+## 0.4.1
+
+### Patch Changes
+
+- 8ef71ed32: Add a `<Avatar>` component to `@backstage/core`.
+
 ## 0.4.0
 
 ### Minor Changes

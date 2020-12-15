@@ -1,5 +1,16 @@
 # @backstage/plugin-auth-backend
 
+## 0.2.7
+
+### Patch Changes
+
+- 7b15cc271: Added configuration schema for the commonly used properties
+- Updated dependencies [c911061b7]
+- Updated dependencies [1d1c2860f]
+- Updated dependencies [0e6298f7e]
+  - @backstage/catalog-model@0.5.1
+  - @backstage/backend-common@0.4.1
+
 ## 0.2.6
 
 ### Patch Changes

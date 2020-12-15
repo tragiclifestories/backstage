@@ -1,5 +1,16 @@
 # @backstage/plugin-pagerduty
 
+## 0.2.3
+
+### Patch Changes
+
+- 3b50f833d: Supporting Timezones
+- Updated dependencies [c911061b7]
+- Updated dependencies [8ef71ed32]
+- Updated dependencies [0e6298f7e]
+  - @backstage/catalog-model@0.5.1
+  - @backstage/core@0.4.1
+
 ## 0.2.2
 
 ### Patch Changes

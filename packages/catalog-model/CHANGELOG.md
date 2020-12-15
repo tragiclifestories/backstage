@@ -1,5 +1,13 @@
 # @backstage/catalog-model
 
+## 0.5.1
+
+### Patch Changes
+
+- c911061b7: Introduce a `profile` section for group entities that can optional include a
+  `displayName`, `email` and `picture`.
+- 0e6298f7e: Ignore relations when comparing entities. This stops the refresh loop from rewriting entities over and over.
+
 ## 0.5.0
 
 ### Minor Changes

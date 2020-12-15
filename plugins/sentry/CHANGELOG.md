@@ -1,5 +1,16 @@
 # @backstage/plugin-sentry
 
+## 0.3.1
+
+### Patch Changes
+
+- 962d1ad66: Added configuration schema for the commonly used properties
+- Updated dependencies [c911061b7]
+- Updated dependencies [8ef71ed32]
+- Updated dependencies [0e6298f7e]
+  - @backstage/catalog-model@0.5.1
+  - @backstage/core@0.4.1
+
 ## 0.3.0
 
 ### Minor Changes
