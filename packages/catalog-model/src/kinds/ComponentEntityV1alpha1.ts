@@ -29,9 +29,11 @@ const schema = yup.object<Partial<ComponentEntityV1alpha1>>({
       type: yup.string().required().min(1),
       lifecycle: yup.string().required().min(1),
       owner: yup.string().required().min(1),
+      parent: yup.string().notRequired().min(1),
       implementsApis: yup.array(yup.string().required()).notRequired(),
       providesApis: yup.array(yup.string().required()).notRequired(),
       consumesApis: yup.array(yup.string().required()).notRequired(),
+      children: yup.array(yup.string().required()).notRequired(),
     })
     .required(),
 });
@@ -48,6 +50,8 @@ export interface ComponentEntityV1alpha1 extends Entity {
      *             any consuming code. The new field providesApis provides the
      *             same functionality like before.
      */
+    parent?: string;
+    children?: string[];
     implementsApis?: string[];
     providesApis?: string[];
     consumesApis?: string[];

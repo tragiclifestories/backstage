@@ -33,6 +33,8 @@ describe('ComponentV1alpha1Validator', () => {
         type: 'service',
         lifecycle: 'production',
         owner: 'me',
+        parent: 'component-0',
+        children: ['component-2'],
         implementsApis: ['api-0'],
         providesApis: ['api-0'],
         consumesApis: ['api-0'],
@@ -162,5 +164,40 @@ describe('ComponentV1alpha1Validator', () => {
   it('accepts no consumesApis', async () => {
     (entity as any).spec.consumesApis = [];
     await expect(validator.check(entity)).resolves.toBe(true);
+  });
+
+  it('accepts missing children', async () => {
+    delete (entity as any).spec.children;
+    await expect(validator.check(entity)).resolves.toBe(true);
+  });
+
+  it('rejects empty children', async () => {
+    (entity as any).spec.children = [''];
+    await expect(validator.check(entity)).rejects.toThrow(/children/);
+  });
+
+  it('rejects undefined children', async () => {
+    (entity as any).spec.children = [undefined];
+    await expect(validator.check(entity)).rejects.toThrow(/children/);
+  });
+
+  it('accepts no children', async () => {
+    (entity as any).spec.children = [];
+    await expect(validator.check(entity)).resolves.toBe(true);
+  });
+
+  it('accepts missing parent', async () => {
+    delete (entity as any).spec.parent;
+    await expect(validator.check(entity)).resolves.toBe(true);
+  });
+
+  it('rejects parent of wrong type', async () => {
+    (entity as any).spec.parent = 7;
+    await expect(validator.check(entity)).rejects.toThrow(/parent/);
+  });
+
+  it('rejects empty parent', async () => {
+    (entity as any).spec.parent = '';
+    await expect(validator.check(entity)).rejects.toThrow(/parent/);
   });
 });
