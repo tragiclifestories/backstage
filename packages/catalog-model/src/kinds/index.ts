@@ -35,6 +35,11 @@ export type {
   LocationEntityV1alpha1,
 } from './LocationEntityV1alpha1';
 export * from './relations';
+export { systemEntityV1alpha1Validator } from './SystemEntityV1alpha1';
+export type {
+  SystemEntityV1alpha1 as SystemEntity,
+  SystemEntityV1alpha1,
+} from './SystemEntityV1alpha1';
 export { templateEntityV1alpha1Validator } from './TemplateEntityV1alpha1';
 export type {
   TemplateEntityV1alpha1 as TemplateEntity,
