@@ -33,6 +33,7 @@ describe('ComponentV1alpha1Validator', () => {
         type: 'service',
         lifecycle: 'production',
         owner: 'me',
+        partOf: ['component-0'],
         providesApis: ['api-0'],
         consumesApis: ['api-0'],
       },
@@ -101,6 +102,26 @@ describe('ComponentV1alpha1Validator', () => {
   it('rejects empty owner', async () => {
     (entity as any).spec.owner = '';
     await expect(validator.check(entity)).rejects.toThrow(/owner/);
+  });
+
+  it('accepts missing partOf', async () => {
+    delete (entity as any).spec.partOf;
+    await expect(validator.check(entity)).resolves.toBe(true);
+  });
+
+  it('rejects empty partOf', async () => {
+    (entity as any).spec.partOf = [''];
+    await expect(validator.check(entity)).rejects.toThrow(/partOf/);
+  });
+
+  it('rejects undefined partOf', async () => {
+    (entity as any).spec.partOf = [undefined];
+    await expect(validator.check(entity)).rejects.toThrow(/partOf/);
+  });
+
+  it('accepts no partOf', async () => {
+    (entity as any).spec.partOf = [];
+    await expect(validator.check(entity)).resolves.toBe(true);
   });
 
   it('accepts missing providesApis', async () => {
