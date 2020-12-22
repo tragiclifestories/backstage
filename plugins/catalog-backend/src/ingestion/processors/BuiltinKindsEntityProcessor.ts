@@ -31,10 +31,12 @@ import {
   RELATION_CHILD_OF,
   RELATION_CONSUMES_API,
   RELATION_HAS_MEMBER,
+  RELATION_HAS_PART,
   RELATION_MEMBER_OF,
   RELATION_OWNED_BY,
   RELATION_OWNER_OF,
   RELATION_PARENT_OF,
+  RELATION_PART_OF,
   RELATION_PROVIDES_API,
   templateEntityV1alpha1Validator,
   UserEntity,
@@ -126,6 +128,12 @@ export class BuiltinKindsEntityProcessor implements CatalogProcessor {
         { defaultKind: 'API', defaultNamespace: selfRef.namespace },
         RELATION_CONSUMES_API,
         RELATION_API_CONSUMED_BY,
+      );
+      doEmit(
+        component.spec.partOf,
+        { defaultKind: 'Component', defaultNamespace: selfRef.namespace },
+        RELATION_PART_OF,
+        RELATION_HAS_PART,
       );
     }
 
