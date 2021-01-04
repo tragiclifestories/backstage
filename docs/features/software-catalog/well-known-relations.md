@@ -91,3 +91,12 @@ A membership relation, typically for [Users](descriptor-format.md#kind-user) in
 [Groups](descriptor-format.md#kind-group).
 
 This relation is commonly based on `spec.memberOf`.
+
+### `partOf` and `hasPart`
+
+A relationship for representing membership of a larger aggregate - for example,
+[Components](descriptor-format.md#kind-component) that are logical parts of a
+larger monolithic Component, or Components that constitute a
+[System](descriptor-format.md#kind-system).
+
+This relation is commonly generated from `spec.partOf` of the Component.

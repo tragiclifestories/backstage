@@ -460,6 +460,11 @@ optional.
 The software catalog expects a list of one or more strings that references the
 names of other entities of the `kind` `API`.
 
+### `spec.partOf` [optional]
+
+Links other entities of which the component is a part - for example, a larger
+monolithic `Component` or a `System`.
+
 ## Kind: Template
 
 Describes the following entity kind:
